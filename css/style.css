@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;600;700&display=swap");
+
+:root {
+  /* Text Preset 1 */
+  --text-1: 700 28px/35px "Overpass", sans-serif;
+
+  /* Text Preset 2 */
+  --text-2: 700 24px/30px "Overpass", sans-serif;
+
+  /* Text Preset 3 */
+  --text-3: 700 16px/24px "Overpass", sans-serif;
+  --text-3-ls: 0.2px;
+  /* Preset 4 – Bold */
+  --text-4-bold: 700 15px/19px "Overpass", sans-serif;
+  --text-4-bold-ls: 2px;
+  /* Preset 4 – Regular */
+  --text-4-regular: 400 15px/24px "Overpass", sans-serif;
+  --text-4-regular-ls: 0px;
+  /* Preset 5 – Bold */
+  --text-5-bold: 700 14px/18px "Overpass", sans-serif;
+  --text-5-bold-ls: 1.87px;
+  /* Preset 5 – SemiBold */
+  --text-5-semibold: 600 14px/24px "Overpass", sans-serif;
+  --text-5-semibold-ls: 0.17px;
+  /* Preset 5 – Regular */
+  --text-5-regular: 400 14px/22px "Overpass", sans-serif;
+  --text-5-regular-ls: 0px;
+
+  --grey-950: #131518; /* RGB(19, 21, 24) */
+  --grey-900: #262e38; /* RGB(38, 46, 56) */
+  --grey-500: #969fad; /* RGB(150, 159, 173) */
+  --orange-500: #fc7614; /* RGB(252, 118, 20) */
+
+  --gradient-1-start: #232a34; /* RGB(35, 42, 52) */
+  --gradient-1-end: #181e27; /* RGB(24, 30, 39) */
+  --gradient-1: linear-gradient(
+    180deg,
+    var(--gradient-1-start),
+    var(--gradient-1-end)
+  );
+}
+
+*::after,
+*::before,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--grey-950);
+  color: hsl(0, 0%, 100%);
+  font-family: "Overpass", sans-serif;
+}
+
+.main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+.card {
+  background: var(--gradient-1);
+  border-radius: 15px;
+  padding: 32px;
+  width: 412px;
+  height: auto;
+
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.rating-state {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: center;
+  align-items: flex-start;
+}
+.icon-container {
+  background-color: var(--grey-900);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading-1 {
+  font: var(--text-2);
+}
+.text-preset-4-regular {
+  font: var(--text-4-regular);
+  letter-spacing: var(--text-4-regular-ls);
+  color: var(--grey-500);
+}
+.rating-buttons-container {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.rating-buttons-container input[type="button"] {
+  flex: 1;
+  background-color: var(--grey-900);
+  color: var(--grey-500);
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font: var(--text-5-semibold);
+  letter-spacing: var(--text-5-semibold-ls);
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+.submit-button {
+  width: 100%;
+  background-color: var(--orange-500);
+  border: none;
+  border-radius: 22.5px;
+  padding: 12px 0;
+  font: var(--text-3);
+  letter-spacing: var(--text-3-ls);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.thank-you-state {
+  display: none;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@media (max-width: 430px) {
+  .card {
+    padding: 14px;
+    width: min(98%, 370px);
+  }
+  .main {
+    padding: 16px 4px;
+  }
+}
