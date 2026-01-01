@@ -148,7 +148,7 @@ body {
   color: black;
 }
 .thank-you-state {
-  display: flex;
+  display: none;
   padding: 44px 36px;
   flex-direction: column;
   gap: 32px;
