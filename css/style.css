@@ -65,7 +65,7 @@ body {
 .card {
   background: var(--gradient-1);
   border-radius: 15px;
-  padding: 32px;
+  padding: 34px 30px;
   width: 412px;
   height: auto;
 
@@ -75,14 +75,14 @@ body {
 .rating-state {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 32px;
   justify-content: center;
   align-items: flex-start;
 }
 .icon-container {
   background-color: var(--grey-900);
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -90,16 +90,19 @@ body {
 }
 
 .heading-1 {
-  font: var(--text-2);
+  font: var(--text-1);
+  padding: 0 0 8px;
 }
-.text-preset-4-regular {
+.text {
+  margin-top: -24px;
   font: var(--text-4-regular);
   letter-spacing: var(--text-4-regular-ls);
   color: var(--grey-500);
 }
 .rating-buttons-container {
+  margin-top: -14px;
   display: flex;
-  gap: 16px;
+  gap: 24px;
   width: 100%;
   justify-content: space-between;
 }
@@ -110,21 +113,23 @@ body {
   color: var(--grey-500);
   border: none;
   border-radius: 50%;
-  width: 48px;
-  height: 48px;
-  font: var(--text-5-semibold);
-  letter-spacing: var(--text-5-semibold-ls);
+  width: 51px;
+  height: 51px;
+  font: var(--text-3);
+  letter-spacing: var(--text-3-ls);
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
 }
 .submit-button {
   width: 100%;
+  height: 45px;
+  text-transform: uppercase;
   background-color: var(--orange-500);
   border: none;
   border-radius: 22.5px;
   padding: 12px 0;
-  font: var(--text-3);
-  letter-spacing: var(--text-3-ls);
+  font: var(--text-5-semibold);
+  letter-spacing: var(--text-5-bold-ls);
   cursor: pointer;
   transition: background-color 0.3s;
 }
@@ -139,10 +144,36 @@ body {
 
 @media (max-width: 430px) {
   .card {
-    padding: 14px;
+    padding: 28px 24px;
     width: min(98%, 370px);
   }
   .main {
     padding: 16px 4px;
+  }
+  .icon-container {
+    width: 40px;
+    height: 40px;
+  }
+  .rating-state {
+    gap: 24px;
+  }
+  .heading-1 {
+    font: var(--text-2);
+  }
+  .text {
+    font: var(--text-5-regular);
+    letter-spacing: var(--text-5-regular-ls);
+  }
+  .rating-buttons-container input[type="button"] {
+    width: 42px;
+    height: 42px;
+    font: var(--text-5-semibold);
+  }
+  .rating-buttons-container {
+    margin-top: -7px;
+    gap: max(12px, 8%);
+  }
+  .text {
+    margin-top: -7px;
   }
 }
