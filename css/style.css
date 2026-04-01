@@ -80,6 +80,11 @@ body {
   justify-content: center;
   align-items: flex-start;
 }
+.flex-container {
+  display: flex;
+  gap: 28px;
+}
+
 .icon-container {
   background-color: var(--grey-900);
   width: 48px;
@@ -88,8 +93,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  visibility: hidden;
 }
-
+.icon-container.active {
+  visibility: visible;
+}
 .heading-1 {
   font: var(--text-1);
   padding: 0 0 8px;
@@ -119,7 +127,9 @@ body {
   font: var(--text-3);
   letter-spacing: var(--text-3-ls);
   cursor: pointer;
-  transition: background-color 0.2s, color 0.3s;
+  transition:
+    background-color 0.2s,
+    color 0.3s;
 }
 .rating-buttons-container input[type="button"]:hover {
   background-color: white;
