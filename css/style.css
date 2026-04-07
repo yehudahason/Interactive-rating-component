@@ -51,6 +51,9 @@ body {
   background-color: var(--grey-950);
   color: hsl(0, 0%, 100%);
   font-family: "Overpass", sans-serif;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .main {
@@ -60,6 +63,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 24px;
+  flex: 1;
 }
 
 .card {
@@ -179,6 +183,58 @@ body {
   font: var(--text-4-regular);
   letter-spacing: var(--text-4-regular-ls);
 }
+.attribution {
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 1rem;
+
+  color: burlywood;
+}
+
+/* Links */
+.attribution a {
+  margin: 0 0.25rem;
+  text-decoration: none;
+  font-weight: 500;
+  color: rgb(230, 82, 28);
+  transition:
+    color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.attribution a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+/* Separator dot */
+.separator {
+  margin: 0 0.5rem;
+  opacity: 0.6;
+}
+
+/* Year flicker effect */
+.year {
+  margin-left: 0.5rem;
+  font-weight: 600;
+  display: inline-block;
+  animation: flicker 1s step-end infinite;
+  color: rgb(219, 89, 42);
+}
+
+/* Flicker animation */
+@keyframes flicker {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 @media (max-width: 430px) {
   .card {
     padding: 28px 24px;
