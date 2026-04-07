@@ -184,6 +184,9 @@ body {
   letter-spacing: var(--text-4-regular-ls);
 }
 .attribution {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   font-size: 0.9rem;
   text-align: center;
   padding: 1rem;
