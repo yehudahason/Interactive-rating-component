@@ -8,7 +8,7 @@ This is a solution to the [Interactive rating component challenge on Frontend Me
 
 ### Links
 
-- Live Site URL: [GitHub Pages](https://yehudahason.github.io/Interactive-rating-component/)
+- My solution at : [GitHub Pages](https://yehudahason.github.io/Interactive-rating-component/)
 
 ## Author
 
